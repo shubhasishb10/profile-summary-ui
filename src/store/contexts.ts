@@ -10,5 +10,6 @@ export const HeaderContext = createContext({
 });
 
 export const MenuItemContext = createContext({
-    menuItems: [] as string[]
+    menuItems: [] as string[],
+    handleMenuItemClick: (menuItem: string) => {}
 })
