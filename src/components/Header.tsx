@@ -7,13 +7,14 @@ export default function Header() {
 
     return (
     <div className="flex border-b-[3px] border-blue-900 bg-blue-300 px-10 py-3 text-blue-900 gap-10">
-      <h1 className="text-4xl font-bold pt-2">{headerData.profileName}</h1>
-      <p className="border-r-4 mb-1 border-blue-900"></p>
-      <div className="text-4xl pt-2">
-        <strong>{headerData.currentOrganization}</strong>
+      <h1 className="text-4xl font-bold pt-2 text-sky-800">{headerData.profileName}</h1>
+      <p className="border-r-2 mb-1 border-blue-900"></p>
+      <div className="text-4xl pt-2 text-sky-600 hover:text-blue-800">
+        <a href={headerData.organizationUrl} rel="noreferrer" target="_blank"><strong className="tracking-widest">{headerData.currentOrganization}</strong></a>
       </div>
-      <div className="text-3xl flex flex-auto justify-center pt-3">
-        <h3 className="">{headerData.designation}</h3>
+      <p className="border-r-2 mb-1 border-blue-900"></p>
+      <div className="text-3xl flex flex-auto pt-3">
+        <h3 className="text-indigo-400">{headerData.designation}</h3>
       </div>
       <div className="flex flex-row gap-6 pt-2">
         <div className="text-xl flex justify-end gap-2">

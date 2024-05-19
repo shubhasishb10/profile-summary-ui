@@ -10,18 +10,24 @@ export default function Dashboard() {
     currentOrganization: "PwC",
     mobileNumber: "8075041134",
     emialId: "shubhasishb10@gmail.com",
+    organizationUrl: "https://www.pwc.com",
   };
 
   const initialMenuItemState = {
-    menuItems: ["Bio", "Education", "Job History", "Technologies", "Projects", "Contacts"]
+    menuItems: [
+      "About me",
+      "Education",
+      "Job History",
+      "Technologies",
+      "Projects",
+      "Contacts",
+    ],
   };
 
   return (
     <>
       <HeaderContext.Provider value={initialHeaderState}>
-        <div>
-          <Header />
-        </div>
+        <Header />
       </HeaderContext.Provider>
       <MenuItemContext.Provider value={initialMenuItemState}>
         <MenuItem />

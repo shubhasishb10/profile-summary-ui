@@ -5,7 +5,8 @@ export const HeaderContext = createContext({
     designation: "" as string,
     currentOrganization: "" as string,
     mobileNumber: "" as string,
-    emialId: "" as string
+    emialId: "" as string,
+    organizationUrl: "" as string
 });
 
 export const MenuItemContext = createContext({
