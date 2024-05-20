@@ -14,13 +14,13 @@ MenuItems.tsx:12 Projects
 MenuItems.tsx:12 Contacts
  */
 
-export function getPageComponentNameFromHeadername(headerName: string): () => JSX.Element {
+export function getPageComponentNameFromHeadername(headerName: string) {
     switch(headerName) {
         case "About me":
             return AboutMe;
         case "Job History":
             return JobHistory;
-        case "Technologies":
+        case "Skills":
             return Skills;
         case "Projects":
             return Projects;
