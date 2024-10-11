@@ -1,5 +1,9 @@
 import Header from "./Header";
-import { HeaderContext, MainContentContext, MenuItemContext } from "../store/contexts";
+import {
+  HeaderContext,
+  MainContentContext,
+  MenuItemContext,
+} from "../store/contexts";
 import MenuItem from "./MenuItems";
 import { useState } from "react";
 import { getPageComponentNameFromHeadername } from "../utils/utils";
@@ -10,11 +14,11 @@ export default function Dashboard() {
 
   const initialHeaderState = {
     profileName: "Shubhasish Bhunia",
-    designation: "Senior Associate",
-    currentOrganization: "Cognizant",
+    designation: "Software Technical Advisor",
+    currentOrganization: "EIS Ltd.",
     mobileNumber: "8075041134",
     emialId: "shubhasishb10@gmail.com",
-    organizationUrl: "https://www.pwc.com",
+    organizationUrl: "https://www.eisgroup.com",
   };
 
   const initialMenuItemState = {
@@ -30,15 +34,15 @@ export default function Dashboard() {
   };
 
   const initialMainContentState = {
-    title: "Hello"
-  }
+    title: "Hello",
+  };
 
   function handleMenuItemClick(menuItem: string) {
     setContent(getPageComponentNameFromHeadername(menuItem));
   }
 
   return (
-    <>
+    <div className="bg-[url('section-bg-1.jpeg')] bg-cover vh-screen h-vh">
       <HeaderContext.Provider value={initialHeaderState}>
         <div className="shadow-4xl">
           <Header />
@@ -50,6 +54,6 @@ export default function Dashboard() {
       <MainContentContext.Provider value={initialMainContentState}>
         {Content}
       </MainContentContext.Provider>
-    </>
+    </div>
   );
 }

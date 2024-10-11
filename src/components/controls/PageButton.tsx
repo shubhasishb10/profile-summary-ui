@@ -1,20 +1,25 @@
 type PageButtonProps = {
   title: string;
   type: "submit" | "reset" | "button" | undefined;
-  others?: string[];
+  onclick?: () => {};
+  className?: string
 };
 
 export default function PageButton({
   title,
   type,
-  ...others
+  onclick,
+  className
 }: PageButtonProps) {
+
+  const classes = " py-2 px-6 m-5 w-[10rem] shadow-xl rounded-lg " + className
+
   return (
     <div>
       <button
         type={type}
-        className=" py-2 px-6 shadow-xl rounded-lg bg-sky-200 text-sky-800 focus:outline"
-        {...others}
+        className={classes}
+        onClick={onclick}
       >
         {title}
       </button>
