@@ -3,7 +3,7 @@ import JobHistory from "../components/menu-content/JobHistory";
 import Skills from "../components/menu-content/Skills";
 import Projects from "../components/menu-content/Projects";
 import Contacts from "../components/menu-content/Contacts";
-import Education from "../components/menu-content/Education";
+import Education from "../components/menu-content/Educations";
 
 /**
  * 
@@ -14,22 +14,25 @@ MenuItems.tsx:12 Projects
 MenuItems.tsx:12 Contacts
  */
 
-export function getPageComponentNameFromHeadername(headerName: string): () => JSX.Element {
-    switch(headerName) {
-        case "About me":
-            return AboutMe;
-        case "Job History":
-            return JobHistory;
-        case "Technologies":
-            return Skills;
-        case "Projects":
-            return Projects;
-        case "Contacts":
-            return Contacts;
-        case "Education":
-            return Education;
-        default:
-            return AboutMe;
+export function getPageComponentNameFromHeadername(headerName: string) {
+  switch (headerName) {
+    case "About me":
+      return AboutMe;
+    case "Job History":
+      return JobHistory;
+    case "Skills":
+      return Skills;
+    case "Projects":
+      return Projects;
+    case "Contacts":
+      return Contacts;
+    case "Education":
+      return Education;
+    default:
+      return AboutMe;
+  }
+}
 
-    }
-} 
+export function formatDate(date: Date) {
+    
+}

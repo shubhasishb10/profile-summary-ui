@@ -12,4 +12,8 @@ export const HeaderContext = createContext({
 export const MenuItemContext = createContext({
     menuItems: [] as string[],
     handleMenuItemClick: (menuItem: string) => {}
+});
+
+export const MainContentContext = createContext({
+    title: "" as string
 })
