@@ -41,3 +41,8 @@
   outline-color: gray;
   outline: 2px !important;
 }
+
+.area-disable {
+  cursor: not-allowed;
+  color: rgb(227, 228, 228) !important;
+}

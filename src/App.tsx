@@ -4,16 +4,16 @@ import Dashboard from "./components/Dashboard";
 import Login from "./components/Login";
 
 function App() {
-  const [login, setLogin] = useState(true);
+  const [login, setLogin] = useState(false);
 
   function handleLoginClick() {
-    setLogin(true);
+    setLogin((bool) => !bool);
   }
 
   return (
     <>
-      {!login && <Login handleLoginClick={handleLoginClick} />}
-      {login && <Dashboard />}
+      {/* {!login && <Login handleLoginClick={handleLoginClick} />} */}
+      <Dashboard />
     </>
   );
 }

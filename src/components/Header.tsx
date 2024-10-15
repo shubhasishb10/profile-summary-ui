@@ -1,12 +1,34 @@
 import { useContext } from "react";
 import { HeaderContext } from "../store/contexts";
 
+import profileBackground from "./../profile-bg.jpg";
+import avatarPicture from "./../profile-pic.jpg";
+
 export default function Header() {
   const headerData = useContext(HeaderContext);
 
   return (
-    <div className="flex bg-violet-300 bg-cover px-10 py-[1%] bg-[url('header-bg.jpeg')] text-gray-100 gap-10 shadow-2xl border-b-2 border-b-blue-800">
-      <h1 className="text-4xl font-bold pt-2 text-white tracking-wide">
+    <div className="bg-cover text-center">
+      <div className="border-b-4 border-[rgb(173,177,180)]">
+        <img
+          src={profileBackground}
+          className="h-40 w-[100%] object-cover opacity-70"
+          alt="code"
+        />
+      </div>
+      <div
+        className="absolute left-[42%] top-[3%] w-60 h-60 bg-[#C3C6D4] 
+          border-white
+            border-4 border-double rounded-full overflow-hidden flex 
+            justify-evenly"
+      >
+        <img
+          src={avatarPicture}
+          className="object-contain absolute shadow-2xl shadow-slate-200"
+          alt="code"
+        />
+      </div>
+      {/* <h1 className="text-4xl font-bold pt-2 text-white tracking-wide">
         {headerData.profileName}
       </h1>
       <p className="border-r-2 mb-1 border-gray-200"></p>
@@ -41,7 +63,7 @@ export default function Header() {
             <u>{headerData.emialId}</u>
           </a>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
