@@ -1,8 +1,10 @@
 import { Table } from "@table-library/react-table-library";
 
 export default function Education() {
-  const headerBorder = "pl-10 pr-10 pt-2 pb-2 border-2 bg-slate-100 text-slate-600";
-  const cellBorder = "pl-10 pr-10 pt-2 pb-2 border-2 text-slate-500";
+    const headerBorder =
+    "pl-10 pr-10 pt-2 pb-2 outline outline-1 outline-gray-400 outline-collapse border-slate-400 bg-slate-100 text-slate-500 text-lg";
+  const cellBorder =
+    "pl-10 pr-10 pt-2 outline outline-1 outline-gray-200  pb-2 text-slate-500 border-collapse";
 
   return (
     <div className="flex flex-col items-center">
@@ -12,7 +14,7 @@ export default function Education() {
         Education
       </div>
       <div className="text-justify text-lg pt-10 pl-10 pr-10">
-        <table className="w-full border-2 border-collapse outline outline-1 outline-gray-200 overflow-hidden text-center rounded-lg shadow-inner">
+        <table className="w-full border-2 border-collapse outline outline-1 outline-offset-2 outline-gray-200 overflow-hidden text-center rounded-lg shadow-inner">
           <thead>
             <th className={headerBorder}>Year</th>
             <th className={headerBorder}>Examination</th>
