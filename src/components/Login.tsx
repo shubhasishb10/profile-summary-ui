@@ -1,7 +1,10 @@
 import PageButton from "./controls/PageButton";
 
-//@ts-ignore
-export default function Login({handleLoginClick}) {
+export default function Login({
+  handleLoginClick,
+}: {
+  handleLoginClick: () => {};
+}) {
   return (
     <div className="grid bg-cover h-screen place-items-center bg-sky-50 bg-[url('login-bg.jpg')] bg-no-repeat bg-opacity-20">
       <form className="text-2xl flex flex-col justify-evenly p-10 bg-[url('bg-login-window.png')] rounded-2xl shadow-xl border-b-8 border-t-8 border-sky-800">
@@ -26,8 +29,13 @@ export default function Login({handleLoginClick}) {
           />
         </div>
         <div className="grid p-10 place-items-center">
-          <PageButton title="Login" type="button" onclick={handleLoginClick} className="font-bold bg-black text-gray-300 
-                          outline outline-4 outline-gray-400 hover:bg-gray-800"/>
+          <PageButton
+            title="Login"
+            type="button"
+            onclick={handleLoginClick}
+            className="font-bold bg-black text-gray-300 
+                          outline outline-4 outline-gray-400 hover:bg-gray-800"
+          />
         </div>
       </form>
     </div>
