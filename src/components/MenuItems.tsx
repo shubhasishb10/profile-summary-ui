@@ -4,7 +4,7 @@ import { MenuItemContext } from "../store/contexts";
 export default function MenuItem() {
   const menuItemContext = useContext(MenuItemContext);
 
-  const [selectedMenuIndex, setSelecetedMenuIndex] = useState<number>(2);
+  const [selectedMenuIndex, setSelecetedMenuIndex] = useState<number>(0);
 
   function handleMenuItemClick(
     count: number,
