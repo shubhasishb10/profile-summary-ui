@@ -12,7 +12,7 @@ import Education from "./menu-content/Educations";
 import JobHistory from "./menu-content/JobHistory";
 
 export default function Dashboard() {
-  const [Content, setContent] = useState<JSX.Element>(JobHistory);
+  const [Content, setContent] = useState<JSX.Element>(AboutMe);
 
   const initialHeaderState = {
     profileName: "Shubhasish Bhunia",
@@ -44,7 +44,7 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="bg-cover vh-screen h-vh" style={{scrollbarWidth: "none"}}>
+    <div className="bg-cover vh-screen h-vh" style={{ scrollbarWidth: "none" }}>
       <HeaderContext.Provider value={initialHeaderState}>
         <div className="shadow-4xl">
           <Header />
