@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "./App.css";
-import Dashboard from "./components/Dashboard";
-import Login from "./components/Login";
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -11,10 +9,10 @@ function App() {
   }
 
   return (
-    <>
-      {/* {!login && <Login handleLoginClick={handleLoginClick} />} */}
-      <Dashboard />
-    </>
+    <div className="app">
+      <h1>Shubhasish Bhunia</h1>
+      <h4>Details comming soon........</h4>
+    </div>
   );
 }
 
