@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import Header from "./components/header/Header";
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -9,9 +10,8 @@ function App() {
   }
 
   return (
-    <div className="app">
-      <h1>Shubhasish Bhunia</h1>
-      <h4>Details comming soon........</h4>
+    <div className="container pt-2">
+      <Header />
     </div>
   );
 }

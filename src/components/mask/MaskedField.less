@@ -1,0 +1,18 @@
+@background_color_1: transparent;
+@background_color_2: rgb(235, 235, 235);
+@background_color_3: rgb(218, 218, 218);
+
+.show-button {
+	border: 2px solid rgb(214, 214, 214);
+	margin: 4px;
+	background-color: @background_color_1;
+	border-radius: 5px;
+	&:hover {
+		background-color: @background_color_2;
+		border: 2px solid rgb(187, 187, 187);
+	}
+	&:focus {
+		background-color: @background_color_3;
+		border: 2px solid rgb(187, 187, 187);
+	}
+}

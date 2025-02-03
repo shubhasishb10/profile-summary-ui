@@ -1,0 +1,15 @@
+.show-button {
+  border: 2px solid #d6d6d6;
+  margin: 4px;
+  background-color: transparent;
+  border-radius: 5px;
+}
+.show-button:hover {
+  background-color: #ebebeb;
+  border: 2px solid #bbbbbb;
+}
+.show-button:focus {
+  background-color: #dadada;
+  border: 2px solid #bbbbbb;
+}
+/*# sourceMappingURL=MaskedField.css.map */
